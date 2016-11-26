@@ -10,35 +10,35 @@
 	The vector of features, extracted from the current user in one frame.
 	The featues are the following 
 
-	Name:										Type:							  Description
-	Hand_Elbow_Angles				cv::Point2f					The angles between the upper arm and lower arm
-																							for each hand (the elbow-angles) in Radians. Both
-																							hands are recorded in a single cv::Point2f object,
-																							with X being the left hand, and Y being the right hand
-																							cv::Point2f::x = left_elbow_angle
-																							cv::Point2f::y - right_hand_angle
+	Name:                    Type:           Description
+	Hand_Elbow_Angles        cv::Point2f     The angles between the upper arm and lower arm
+                                           for each hand (the elbow-angles) in Radians. Both
+                                           hands are recorded in a single cv::Point2f object,
+                                           with X being the left hand, and Y being the right hand
+                                           cv::Point2f::x = left_elbow_angle
+                                           cv::Point2f::y - right_hand_angle
 	
-	Hand_Direction_Angles		cv::Point2f					The angle between the position of the user's center of mass
-																							and the positions of the left and right hands (wrists).
-																							The "center of mass" in this case is the head position,
-																							but it could also be the center of the torso.
-																							The angles are given in the Descartes (Cartesian) coordinate system:
-																																		270
-																																		 |
-																															180----0----360/0
-																																		 |
-																																		 90
-																							Like in the previous case, the angles are stored in one
-																							cv::Point2f object, with X and Y being left and right hands
-																							respectively.
+	Hand_Direction_Angles    cv::Point2f     The angle between the position of the user's center of mass
+                                           and the positions of the left and right hands (wrists).
+                                           The "center of mass" in this case is the head position,
+                                           but it could also be the center of the torso.
+                                           The angles are given in the Descartes (Cartesian) coordinate system:
+                                                                  270
+                                                                   |
+                                                            180----0----360/0
+                                                                   |
+                                                                   90
+                                           Like in the previous case, the angles are stored in one
+                                           cv::Point2f object, with X and Y being left and right hands
+                                           respectively.
 
-	Left_Elbow_Position			cv::Point2f					The position of the user's left elbow relative to the center of mass
+	Left_Elbow_Position      cv::Point2f     The position of the user's left elbow relative to the center of mass
 
-	Left_Hand_Position			cv::Point2f					The position of the user's left wrist relative to the center of mass
+	Left_Hand_Position       cv::Point2f     The position of the user's left wrist relative to the center of mass
 
-	Right_Elbow_Position		cv::Point2f					The position of the user's right elbow relative to the center of mass
+	Right_Elbow_Position     cv::Point2f     The position of the user's right elbow relative to the center of mass
 
-	Right_Hand_Position			cv::Point2f					The position of the user's right wrist relative to the center of mass
+	Right_Hand_Position      cv::Point2f     The position of the user's right wrist relative to the center of mass
 
 	In the latter four cases the positions of the wrists and elbows are calculated relative to the center of mass 
 	(int this particular case - position of the head). Because positions are relative, the left hand will be a negative

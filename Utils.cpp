@@ -140,7 +140,7 @@ void overlayImage(cv::Mat& src, cv::Mat& overlay, const cv::Point& location) {
 			for (int c = 0; opacity > 0 && c < src.channels(); ++c) {
 				unsigned char overlayPx = overlay.data[fY * overlay.step + fX * overlay.channels() + c];
 				unsigned char srcPx = src.data[y * src.step + x * src.channels() + c];
-				src.data[y * src.step + src.channels() * x + c] = srcPx * (1. - opacity) + overlayPx * opacity;
+				src.data[y * src.step + src.channels() * x + c] = srcPx * (1. - opacity) + overlayPx * opacity * 0.75;
 			}
 		}
 	}

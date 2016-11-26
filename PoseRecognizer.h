@@ -4,15 +4,15 @@
 
 #include <thread>
 
-#define KEY_PGUP 2228224	// the key code for the PageUp button
-#define KEY_PGDN 2162688	// the key code for the PageDown button
-#define KEY_TRAIN 'b'			// the key that is pressed for adding a training sample
+#define KEY_PGUP 2228224      // the key code for the PageUp button
+#define KEY_PGDN 2162688      // the key code for the PageDown button
+#define KEY_TRAIN 'b'         // the key that is pressed for adding a training sample
 
-#define FRAME_SKIP 4			// how many frames to skip
+#define FRAME_SKIP 4          // how many frames to skip
 
-#define MAX_USERS 10			// maximum number of users in the frame at the same time
+#define MAX_USERS 10          // maximum number of users in the frame at the same time
 
-#define HOLD_POSE	3				// how long the pose needs to be held before it's recognized. Should be odd number. Default: 3
+#define HOLD_POSE	3           // how long the pose needs to be held before it's recognized. Should be odd number. Default: 3
 
 #define USER_MESSAGE(msg) \
 	{printf("[%08llu] User #%d:\t%s\n",ts, user.getId(),msg);}

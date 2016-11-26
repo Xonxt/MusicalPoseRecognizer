@@ -212,16 +212,16 @@ private:
 		For example, let's saya user is first standing still (-1). And then at frame 6 he assumes 
 		a "Violin playing position" (2). The the tumbler will look like this:
 
-		Frame:		Tumbler:
-		0											<---- Nothing
-		1					-1							
-		2					-1 -1
-		3					-1 -1 -1		<---- Still nothing
-		4					-1 -1 -1
-		5					-1 -1 -1
-		6					 2 -1 -1		<---- User assumes position...
-		7					 2  2 -1
-		8					 2  2  2    <---- "Violin" pose recognized!!
+		Frame:  Tumbler:
+		0                  <---- Nothing
+		1       -1							
+		2       -1 -1
+		3       -1 -1 -1   <---- Still nothing
+		4       -1 -1 -1
+		5       -1 -1 -1
+		6        2 -1 -1   <---- User assumes position...
+		7        2  2 -1
+		8        2  2  2   <---- "Violin" pose recognized!!
 	*/
 	std::vector<int> poseTumbler;
 

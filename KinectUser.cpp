@@ -201,21 +201,21 @@ void KinectUser::drawUserSkeleton(cv::Mat& image) {
 
 		// draw skeleton
 		if (!image.empty()) {
-			cv::line(image, aPoint[0], aPoint[1], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[1], aPoint[2], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[1], aPoint[3], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[2], aPoint[4], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[3], aPoint[5], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[4], aPoint[6], cv::Scalar(255, 0, 0), 1);
-			cv::line(image, aPoint[5], aPoint[7], cv::Scalar(255, 0, 0), 1);
+			cv::line(image, aPoint[0], aPoint[1], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[1], aPoint[2], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[1], aPoint[3], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[2], aPoint[4], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[3], aPoint[5], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[4], aPoint[6], cv::Scalar(255, 0, 0), 2);
+			cv::line(image, aPoint[5], aPoint[7], cv::Scalar(255, 0, 0), 2);
 		}
 
 		// draw joints
 		for (int s = 0; s < aPoint.size(); ++s) {
 			if (aJoints[s].getPositionConfidence() > 0.5)
-				cv::circle(image, aPoint[s], 3, cv::Scalar(0, 0, 255), 1);
+				cv::circle(image, aPoint[s], 3, cv::Scalar(0, 0, 255), 2);
 			else
-				cv::circle(image, aPoint[s], 3, cv::Scalar(0, 255, 0), 1);
+				cv::circle(image, aPoint[s], 3, cv::Scalar(0, 255, 0), 2);
 		}
 	}
 }

@@ -63,21 +63,21 @@ double calcDistance(const cv::Point3f& a, const cv::Point3f& b);
 double calcDistance(const cv::Point2f& a, const cv::Point2f& b);
 
 /**
-	Calculate the angle, formed by three points in 3D space.
+  Calculate the angle, formed by three points in 3D space.
 
-	a \																		a	/
-	   \																	 /
-		  \										or						/
-		   \___________										 /____________
-		  b						  c								 b						   c
+    a\                             a /
+      \                             /
+       \              or           /
+        \___________              /____________
+        b           c           b             c
 
-	Used to calculate the elbow angle between the upper arm and lower arm,
-	where the three points are: shoulder - elbow - wrist.
+  Used to calculate the elbow angle between the upper arm and lower arm,
+  where the three points are: shoulder - elbow - wrist.
 
-	@param a The first point
-	@param b The second point
-	@param c The third point
-	@return The angle in radians
+  @param a The first point
+  @param b The second point
+  @param c The third point
+  @return The angle in radians
 */
 double getThreePointAngle(const cv::Point3f& a, const cv::Point3f& b, const cv::Point3f& c);
 
